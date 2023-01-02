@@ -8,5 +8,6 @@
 2. 保存后再打开任何网页，右上角都会出现一个半透明的按钮。
 3. F12打开开发者工具，用箭头工具选中想要屏蔽的div，复制其id或class
 4. 点击半透明按钮弹出输入框，将id或class粘贴进去，再次点击按钮即可完成屏蔽。
+
 本插件屏蔽的方式是将需要屏蔽的id/class作为localStorage.AdName的值存入localStorage，插件根据这些值对它们的div赋上style="display: none;"。
 如果失误将一些div屏蔽掉了，在开发者工具中-Application-localStorage中找到它，删除该条目即可。
