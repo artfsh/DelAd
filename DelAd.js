@@ -24,12 +24,12 @@ document.getElementById('DelAd').onclick = function(){
 		if(document.getElementById('AdInputBox').value != ''){//input中有值才执行此代码
 			for(var i=1 ; eval("localStorage.hasOwnProperty('AdName"+i+"')") ; i++){}
 			eval("localStorage.AdName"+i+"=document.getElementById('AdInputBox').value");//将input中的内容作为AdNamei的值存入localStorage
-			document.getElementById('AdInputBox').value = '';//重置input内容
 			if(document.getElementById(document.getElementById('AdInputBox').value)){//将这个广告隐藏
 				document.getElementById(document.getElementById('AdInputBox').value).style.display = 'none';
 			}else if(document.getElementsByClassName(document.getElementById('AdInputBox').value)[0]){
 				document.getElementsByClassName(document.getElementById('AdInputBox').value)[0].style.display = 'none';
 			}
+			document.getElementById('AdInputBox').value = '';//重置input内容
 		}
 	}
 }
